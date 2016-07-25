@@ -1,6 +1,6 @@
 \# includes L13
 
-## Object Design II: Specifying Interfaces
+## ***TO BE PASTED TO FITTING SUMMARY***
 ### Modeling constraints with contracts
 - functional requirements are addresses during analysis
   - They can be modeled with use cases, class diagrams, etc

@@ -16,8 +16,8 @@
 - **communication mechanism**
   - tools to transmit information
   - synchronous
-  - asynchronous (sender and receiver are not communication at the same time)
-- ![communication](pics/communication.png)
+  - asynchronous (sender and receiver are not communication at the same time)<br>
+<img src=pics/communication.png" width="400">
 
 ### communication events
 **planned communication events**
@@ -66,14 +66,14 @@
   - pro: suited for discussion
   - con: primitive access control
 
-## Project definition
+## ***Project*** definition
 - a project is an **undertaking**, **limited in time**, to **achieve a set of goals** that **require a concerted effort**
 - a project includes:
   - a set of **deliverables** to a client
   - a **schedule**
   - technical and managerial **activities** to produce and deliver the deliverables
   - **resources** consumed by the activities
-- ![project](pics/project.png)
+<img src=pics/project.png" width="400">
 
 - laws of project management
   - projects progress quickly until they are ~90% complete
@@ -82,11 +82,12 @@
   - murphy's law:
     - "if something can go wrong, it will"
 - what makes a project successful
- ![success project](pics/succ_project.png)
+<img src=pics/succ_project.png" width="400">
 
 ## Project organisation
 - a project organization defines the relationships among resources, in particular the participants, in a project
-- ![organization](pics/organisation.png)
+<img src=pics/organisation.png" width="400">
+
 - a project organization should define:
   - who decides
   - who reports their status to whom
@@ -138,13 +139,13 @@
     - requirements are changing during development
 
   - organization and communication:
-    ![organization](pics/organizationUML.png)
+  <img src=pics/organizationUML.png" width="400">
 
 ## Roles in Software Organization
 - **Role**
   - a role defines a set of responsibilities
   - typical roles in software organizations:
-    ![roles](pics/roles.png)
+    <img src=pics/roles.png" width="400">
 
 - **responsibilities** are assigned to roles, roles are assigned to people
 - possible mappings of roles to participant
@@ -174,10 +175,10 @@
     - you can delegate authority, but not responsibility. You can only share responsibility.
 
 ### Project: activities, tasks and functions
-![project activities, tasks, functions](pics/project_af.png)
+<img src=pics/project_af.png" width="400">
 - activity diagrams (prior PERT-chart)
-- ![example house](pics/house.png)
-- ![uml project](pics/uml_project.png)
+<img src=pics/house.png" width="400">
+<img src=pics/uml_project.png" width="400">
 
 - **activities**
   - major unit of work
@@ -196,7 +197,7 @@
   - a task must have a completion criteria
 
 - model of tasks, activities, roles, work products and packages
-![task activities roles](pics/task.png)
+<img src=pics/task.png" width="400">
 
 
 ### simple dynamic model of a project
@@ -207,7 +208,7 @@
   - **steady state** - the work is being done
   - **termination** - the project is being finished
 - UML model:
-![Slide 11](pics/states_project.png)
+<img src=pics/states_project.png" width="400">
 - **common mistakes**
   - project manager skipping the start phase
     - reasons for skipping
@@ -230,13 +231,13 @@
   - be a leader
 
 - stages of a software project:
-![Slide 11](pics/stages_1.png)
-![Slide 11](pics/stages_2.png)
+<img src=pics/stages_1.png" width="400">
+<img src=pics/stages_2.png" width="400">
 
 
 #### Some structures:
-![communication structure](pics/commStruc.png)
-![decision structure](pics/descStruc.png)
-![decision structure II](pics/descStruc2.png)
-![hierarchical organization](pics/hierstruc.png)
-![hierarchical organization](pics/hierstruc2.png)
+<img src=pics/commStruc.png" width="400">
+<img src=pics/descStruc.png" width="400">
+<img src=pics/descStruc2.png" width="400">
+<img src=pics/hierstruc.png" width="400">
+<img src=pics/hierstruc2.png" width="400">

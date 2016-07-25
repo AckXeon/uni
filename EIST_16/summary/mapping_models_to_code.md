@@ -1,5 +1,5 @@
 ## mapping models to code
-### 4 typed of transformations
+### 4 types of transformations
 <img src="pics/modeltransf.png" width="300">
 
 ### ***code smell***

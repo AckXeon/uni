@@ -1,18 +1,18 @@
-\# includes 
+\# includes
 
 ### types of modeling
-- functional modeling
+- ***functional modeling*** (scenarios, use case diagrams)
   - describe the functionality of the system
   - the functional model is described with scenarios, use cases
   - purpose:
     - identification of functional requirements
     - delivery of new operations (methods) for the object model
-- object modeling
+- ***object modeling*** (class diagrams, instance diagrams, communication diagrams, deployment diagrams)
   - describe the structure of the system
   - purpose:
     - identify the structure of the system
     - is the center of the modeling activities
-- dynamic modeling
+- ***dynamic modeling*** (sequence diagrams, statechart and activity diagrams)
   - describe the dynamic behavior of the system
   - the dynamic model is described with
     - state diagrams

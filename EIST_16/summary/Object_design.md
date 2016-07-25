@@ -100,8 +100,9 @@
   - The specification is an abstract class where all the operations are specified but not yet implemented
   - Reuse: Specified functionality in the super class.
 
-### Delegation
-- delegation is a way of making composition as powerful for reuse as inheritance
+### ***Delegation***
+> delegation is a way of making composition as powerful for reuse as inheritance
+
 - In delegation, three objects are involved:
   - The Client calling the Receiver
   - The Receiver sending the request to the Delegate

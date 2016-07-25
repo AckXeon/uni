@@ -13,15 +13,15 @@
   - „A pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem in such a way that you can use this solution a million times over, without ever doing it the same way twice“
 
 ## 3 types of patterns
-- ***structural patterns***
+- ***structural patterns*** (facade, adapter, bridge, composite, proxy)
   - reduce coupling between two or more classes
   - introduce an abstract class to enable future extensions
   - encapsulate complex structures
-- ***behavioral patterns***
+- ***behavioral patterns*** (strategy, template method)
   - allow choice between algorithms (at runtime)
   - allow the assignment of responsibilities to objects
   - model complex control flows that are difficult to follow at runtime
-- ***creational patterns***
+- ***creational patterns*** (abstract factory)
   - allow to abstract from complex instantiation processes
   - make the system independent from the way its objects are created, composed and represented
 
@@ -160,11 +160,12 @@
 - template pattern is mainly used in frameworks
 
 ### ***State pattern***
-- the context is the class that can have a number of internal states, it presents a single interface to the outside world
-- the state interface defines a common interface for all concrete states; the states all implement the same interface so they are interchangable
+- used, when the behavior of a object should change, when the internal state changes
+- the ***context*** is the class that can have a number of internal states, it presents a single interface to the outside world
+- the ***state*** interface defines a common interface for all concrete states; the states all implement the same interface so they are interchangable
   - there are usually as many concrete states as there are internal states
-- concrete states handle requests from the context and define state-specific behavior
-- each concrete state provides its own implementations for a request. in this way, when the context changes state its behavior as well
+- ***concrete states*** handle requests from the context and define state-specific behavior
+- each concrete state provides its own implementations for a request. in this way, **when the context changes state its behavior** as well
 - properties
   - useful for objects that change state at runtime
   - uses polymorphism to define different behaviors for different states of an object
@@ -173,6 +174,14 @@
   - In the bridge pattern, the selection of the subclass is done at system initialization time
 - Comparison with Strategy pattern:
   - In the strategy pattern, the selection of the subclass depends on an external policy<br>
+- **benefits**:
+  - localizes state specific behavior
+  - maintainable and flexible (its easy to add more states for additional behavior)
+  - avoids if-else or switch-case statements
+  - makes state transitions explicit
+- **implementation issues**
+  - who defines the state transitions?
+  - is the state transition defines in the context class or in the concrete states?
   <img src="pics/statepattern.png" width="400">
 
 #### Summary of design patterns

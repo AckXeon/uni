@@ -3,3 +3,53 @@
   - forward engineering + reverse engineering
 - ***reengineering***
   - changing a software system after it has been reverse engineered
+- ***falsification***
+  - the act of disproving a theory or hypothesis
+
+- ***inheritance in Java***
+  - Realization of *specialization and generalization*
+    - Definition of subclass
+    - Java keyword: `extends`
+  - Realization of *simple inheritance*
+    - Overwriting of methods is not allowed
+    - Java keyword: `final`
+  - Realization of *implementation inheritance*
+    - Overwriting of methods
+    - No keyword necessary
+    - Overwriting of methods is default in Java
+  - Realization of *specification inheritance*
+    - Specification of an interface
+    - Java keywords: `abstract`, `interface`
+
+- ***use of models***
+  - *Communication*: The model provides a common vocabulary. A model is communicated informally (“conceptual model”)
+    - Target is a human being (developer, end user)
+  - *Analysis and Design*: Models enable developers to specify and reason about a future system
+    - Target is a tool (CASE tool, compiler)
+  - *Archival*: Compact representation for storing the design and rationale of an existing system
+    - Target is the human (analysis, project manager).
+
+- ***problem statement -> system model***
+  - Analyze the problem statement
+    - Elicit and identify ***functional requirements***
+    - Elicit and identify ***nonfunctional requirements***
+    - Identify ***constraints*** (*pseudo requirements*)
+  - Build the ***functional model***:
+    - Develop ***use cases*** to illustrate functional requirements
+  - Build the ***dynamic model***:
+    - Develop sequence diagrams to illustrate the interaction between objects
+    - Develop state diagrams for objects with interesting behavior
+  - Build the ***object model***:
+    - Develop class diagrams for the structure of the system.
+
+- ***project***
+  - consists of:  
+    - a start date and duration
+    - a set of deliverables
+    - a schedule
+    -  all technical and managerial activities requeired to produce and deliver the deliverables
+    - resources consumed by the activities
+    - a project is managed by a ***project manager***
+      - administers the resources
+      - maintains accountability
+      - makes sure the project goals are met

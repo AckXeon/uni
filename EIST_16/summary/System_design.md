@@ -218,7 +218,7 @@ achieving **high cohesion and low coupling**:
   - file systems (if the data is used by multiple readers, but just a single writer at the same time)
   - database systems (if there are multiple concurrent readers and writers)
 
-#### mapping an object model to a database
+#### mapping an object model to a relational database
 - UM models can be mapped to relational databases
   - some degradation appears, because all UML constructs have to be mapped onto a single relational database construct, the ***table***
 - mapping of classes, attributes and associations
