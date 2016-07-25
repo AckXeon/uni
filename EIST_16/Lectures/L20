@@ -36,7 +36,26 @@
 - software evolution
   - continual change to a better state
 
-**TODO: Lehmans laws of software evolution, slide 18**
+#### Lehmans law of software evolution
+1. Continuing Change:
+  - Unless a system is continually modified to satisfy emerging needs of users, the system becomes increasingly less useful
+2. Increasing Complexity:
+  - Unless additional work is done to explicitly reduce the complexity of a system, the system will become increasingly more complex due to maintenance-related changes
+  - Ivar Jacobsen used the term “Software Entropy”
+3. Self Regulation:
+  - The evolution process is self-regulating in the sense that the measures of products and processes, that are produced during the evolution, follow close to normal distributions.
+4. Conservation of Organizational Stability:
+  - The average effective global activity rate on an evolving system is almost constant throughout the lifetime of the system. In other words, the average amount of additional effort needed to produce a new release is almost the same
+5. Conservation of Familiarity
+  - Stakeholders (developers, users,...) must gain a desired level of understanding of the system’s content and behavior to realize satisfactory evolution
+  - Large incremental growth in a release reduces that understanding. Therefore, the average incremental growth in an evolving system remains almost the same
+6. Continuing Growth
+  - The functionality of a system must be continually increased to maintain user satisfaction over the system lifetime
+7. Declining Quality
+  - Unless the design of a system is fine-tuned and adapted to new operational environments, the system will be perceived as declining over the lifetime of the system
+8. Feedback System:
+  - The system’s evolution process involves multi-loop, multi- agent, multi-level feedback among different kinds of activities
+  - Developers must recognize those complex interactions in order to continually evolve an existing system to deliver more functionalities and higher levels of qualities.
 
 #### staged model of maintenance and software evolution
 - has 4 stages
