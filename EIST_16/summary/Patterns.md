@@ -150,7 +150,7 @@
 
   <img src="pics/mvcuml.png" width="400">
 
-### the template pattern
+### ***template pattern***
 - used, when several subclasses share the same algorithm but differ on the specifics
 - approach: the common steps of the algorithms are factored out into an abstract class
   - abstract methods for each of these steps
@@ -159,7 +159,7 @@
   - difference to *strategy pattern*: the strategy pattern uses delegation to vary the entire algorithm
 - template pattern is mainly used in frameworks
 
-### State pattern
+### ***State pattern***
 - the context is the class that can have a number of internal states, it presents a single interface to the outside world
 - the state interface defines a common interface for all concrete states; the states all implement the same interface so they are interchangable
   - there are usually as many concrete states as there are internal states

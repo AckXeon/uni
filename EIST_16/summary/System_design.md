@@ -1,9 +1,8 @@
 \# includes L8
 
+# System design
 
-## System design
-
-### Overview of system design
+## Overview of system design
 - design is difficult
   - *analysis*: focuses on the application domain
   - *design* focuses on the solution domain
@@ -11,7 +10,7 @@
     - design knowledge is a moving target
     - *design window*: time in which design decisions have to be made
 
-### System design: 8 issues
+## System design: 8 issues
 1) Identify design goals
     - additional nonfuctional requirements
     - design trade-offs
@@ -42,7 +41,7 @@
     - termination
     - failure
 
-### from analysis to system design
+## from analysis to system design
 | source | goal |
 |---|---|
 | nonfunctional requirements | 1. design goals |
@@ -54,7 +53,7 @@
 | dynamic model | 7. software control |
 | functional requirements | 8. boundary conditions |
 
-### design goals
+### 1) design goals
 - design goals govern the system design activities
 - any nonfunctional requirement is a deign goal
 - additional stakeholder goals are formulated with respect to
@@ -66,12 +65,12 @@
 
 | typical design trade offs: | |
 | --- | --- |
-| functionality | usability |
-| cost | robustness |
-| efficiency | portability |
-| rapid development | functionality |
-| cost | reusability |
-| backward compatibility | readability |
+| functionality | vs. usability |
+| cost | vs. robustness |
+| efficiency | vs. portability |
+| rapid development | vs. functionality |
+| cost | vs. reusability |
+| backward compatibility | vs. readability |
 
 ### 2) subsystem decomposition
 #### subsystems and services
@@ -93,7 +92,7 @@
   - the set of public operations provided by a subsystem
 ##### Coupling and coherence of subsystems
 - goal: reduce system complexity while allowing change
-- *coherence* measures dependency among classes
+- *coherence / cohesion* measures dependency among classes
   - *high coherence*: the classes and subsystem perform similar tasks and are related to each other via many associations
   - *low coherence*: lots of miscellaneous and auxiliary classes, almost no associations
 - *coupling* measures dependency among subsystems
