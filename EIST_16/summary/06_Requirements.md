@@ -5,7 +5,7 @@
 > From the problem statement to the requirement specification
 
 ### Requirements
-- A **Requirement** os a feature that the system must have or a constraint is must satisfy to be accepted by the client
+- A **Requirement is a feature that the system must have or a constraint is must satisfy to be accepted by the client**
   - requirements describe the user's view of the system
   - identify the *what* of the system, not the *how*
 

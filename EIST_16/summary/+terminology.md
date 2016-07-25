@@ -53,3 +53,68 @@
       - administers the resources
       - maintains accountability
       - makes sure the project goals are met
+
+- ***functional organization***
+  - in a functional organization people are grouped into departments, each addresses an activity
+
+- ***communication event***
+  - information exchange with defined objects and scopes
+    - scheduled events: **planned communication**, eg. review, meeting
+    - unscheduled events: **event-driven communication**, eg. request for change, clarification, bug report
+
+- ***communication mechanism***
+  - tool or procedure that can be used to deal with a communication event
+    - **synchronous mechanism**: tool requires partner to be available at the same time
+    - **asynchronous mechanism**: no need to be available at the same time as partner
+
+- ***stages of a software project***
+  1. conception
+  2. definition
+  3. start
+  4. steady state
+  5. termination
+
+- ***role***
+  - a role is a set of responsibilities
+
+- ***authority***
+  - the ability to make binding decisions between people and roles
+
+- ***responsibility***
+  - the commitment of a role to achieve specific results
+
+- ***accountability***
+  - tracking task performance to a specific person
+
+- ***delegation***
+  - binding a responsibility, assigned to one person, to another person ("let somebody else do the job")
+
+- ***Software Configuration Management***
+  - Software Configuration Management is a project function with the goal to make technical and managerial activities more effective
+
+- ***continuous integration***
+  - the goal is to have a working version of the software all the time during the project
+  - The development team uses an automated workflow to periodically integrate and test all parts of the system to validate the correct functionality of a system after making changes
+  - When a test does not pass, the team immediately turns their attention to finding and fixing the faults. This reduces integration problems, and ultimately speeds up development.
+
+- ***continuous deployment***
+  - The practice of continuously deploying successful software builds automatically to some environment, but not necessarily to actual users  the practice of continuously deploying successful builds automatically
+
+- ***continuous delivery***
+  - Continuous delivery implies continuous deployment and is the practice of ensuring that the software is continuously ready for release and deployed to actual customers
+
+- ***software development activities***
+  1) Requirement elicitation
+  2) analysis
+  3) system design
+  4) detailed design (object design)
+  5) implementation
+  6) testing
+
+
+- ***contract***
+  - A contract is an exact specification of the interface of an object
+  - A contract includes three types of constraints
+    - Invariants
+    - Preconditions (“rights”)
+    - Postconditions (“obligations”)

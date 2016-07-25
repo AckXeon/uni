@@ -3,14 +3,17 @@
 # Testing
 
 ## Terminology
-- Failure
+- ***Failure***
  - Any deviation of the observed behavior from the specific behavior
-- Erroneous state (Error)
+- ***Erroneous state (Error)***
  - The system is in a state such that further processing by the system can lead to failure
-- Fault
+- ***Fault***
  - A mechanical or algorithmic cause of an error ("bug")
-- Validation
+- ***Verification***
+  - Activity, that checks, if the observes behavior complies with the specified behavior of the system
+- ***Validation***
  - Activity of checking for deviations between the observed behavior of a system and its specification
+ - Activity that checks if the observed behavior meets the needs informally expressed by a stakeholder (customer, end user)
 
 ### types of misbehavior
 - Algorithmic fault
@@ -28,7 +31,7 @@
  - testing, debugging, monitoring
 - Fault tolerance
  - exception handling<br>
-<img src="pics/taxforfaulthandling.png" width="300">
+<img src="pics/taxforfaulthandling.png" width="400">
 
 ### Observations
 - Its impossible to completely test a system
@@ -63,21 +66,23 @@
 
 ## object-oriented test modeling
 - start with the system model
-- system contains the SUT
+- system contains the SUT (system under test)
 - SUT is not isolated
 - test model is derived from the SUT
 -
 - test doubles:
  - 4 types of test doubles:
-   - dummy objects
+   - ***dummy objects***
      - never actually used but passed around
-     used to fill parameter lists
-   - fake object
+     - used to fill parameter lists
+   - ***fake object***
      - working implementation but usually contains a "shortcut"
-   - stub
-     - always same answer when invoced
-   - mock objects
-     - mimic behavior
+   - ***stub***
+     - always same answer when invoked
+   - ***mock objects***
+     - mimic behavior<br>
+<img src="pics/mockobj.png" width="200">
+
 
 ## Testing activities and corresponding models
 - Developer part:
@@ -96,6 +101,9 @@
  - the entire system is tested
 - acceptance testing
  - system is tested in the target environment
+
+<img src="pics/modbasedtestingact.png" width="400">
+
 
 ### static and dynamic analysis
 - static analysis

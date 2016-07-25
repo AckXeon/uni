@@ -57,8 +57,6 @@
   - instruments of automated systems to accomplish a technique
   - IDE / CASE
 
-
-
 **Computer science vs. Engineering**
 - the computer scientist
   - assumes techniques and tools have to be developed

@@ -92,7 +92,11 @@
   - who decides
   - who reports their status to whom
   - who communicates with whom
-- functional organization
+- project organization structures
+  - **decision structure**: models the control flow: **who decides what**?
+  - **reporting structure**: who reports their status to whom?
+  - **communication structure**: models the information flow: **who facilitates communication with whom**?
+- ***functional organization***
   - in a functional organization people are grouped into departments, each addresses an activity
   - properties:
     - projects are pipelined through the departments
@@ -103,49 +107,50 @@
     - is is difficult to make major investments in equipment and facilities
     - there is a high chance of overlap
 
-  - project based organization
-    - in a project based organization people are assigned to a projects, addressing a problem to be solved within a specified time and budget
-    - advantages
-      - very responsive to new requirements
-      - new people can be hired who are familiar with the problem / have special capabilities
-    - disadvantages
-      - teams cannot be assembled rapidly
-      - because there are no "predefined lines", roles and responsibilities have to be defined at the beginning of the project
+- ***project based organization***
+  - in a project based organization people are assigned to a projects, addressing a problem to be solved within a specified time and budget
+  - advantages
+    - very responsive to new requirements
+    - new people can be hired who are familiar with the problem / have special capabilities
+  - disadvantages
+    - teams cannot be assembled rapidly
+    - because there are no "predefined lines", roles and responsibilities have to be defined at the beginning of the project
+    - teams are disassembled when the project terminates
 
-  - matrix organization
-    - in a matrix organization, people from different departments of a functional organization are assigned to work on one or more projects
-    - people are usually assigned to multiple projects (<100% of their time per project)
-    - advantages
-      - teams for projects can be assemble repodöy from the existing line organization
-      - rare expertise can be applied to multiple projects
-      - consistent reporting and decision procedures can be used for projects of the same type
-    - disadvantages
-      - participants are usually not familiar with each other
-      - participants must get used to each other
-      - participants have different working styles
+- ***matrix organization***
+  - in a matrix organization, people from different departments of a functional organization are assigned to work on one or more projects
+  - people are usually assigned to multiple projects (<100% of their time per project)
+  - advantages
+    - teams for projects can be assembled rapidly from the existing line organization
+    - rare expertise can be applied to multiple projects
+    - consistent reporting and decision procedures can be used for projects of the same type
+  - disadvantages
+    - participants are usually not familiar with each other
+    - participants must get used to each other
+    - participants have different working styles
 
-    - challenges
-      - team members work on multiple projects which have competing demands for their time
-      - team members work for two bosses, which have different focuses
-      - multiple work procedures and reporting systems are used
+  - challenges
+    - team members work on multiple projects which have competing demands for their time
+    - team members work for two bosses, which have different focuses ("double-boss problem")
+    - multiple work procedures and reporting systems are used
 
-  - when to use functional organization?
-    - projects with high degree of certainty, stability, uniformity and repetition
-      - requires little communication, role definitions are clear
-  - when to use project-based organization
-    - the project hat a high degree of unclarity
-      - open comm needed
-      - roles are defined on project basis
-    - requirements are changing during development
+- when to use functional organization?
+  - projects with high degree of certainty, stability, uniformity and repetition
+    - requires little communication, role definitions are clear
+- when to use project-based organization
+  - the project hat a high degree of unclarity
+    - open comm needed
+    - roles are defined on project basis
+  - requirements are changing during development
 
-  - organization and communication:
-  <br><img src="pics/organizationUML.png" width="400">
+- organization and communication:
+<br><img src="pics/organizationUML.png" width="400">
 
 ## Roles in Software Organization
 - **Role**
   - a role defines a set of responsibilities
   - typical roles in software organizations:
-    <img src=pics/roles.png" width="400">
+    <br><img src="pics/roletaxonomy.png" width="400">
 
 - **responsibilities** are assigned to roles, roles are assigned to people
 - possible mappings of roles to participant
@@ -159,15 +164,15 @@
     - some people don't have significant roles
     - lack of accountability
     - loosing touch with project
-- Key concepts for mapping roles to people
-  - **authority**
+- Key concepts for **mapping roles to people**
+  - ***authority***
     - the ability to make binding decisions between people and roles
-  - **responsibility**
+  - ***responsibility***
     - the commitment of a role to achieve specific results
-  - **accountability**
+  - ***accountability***
     - tracking task performance to a specific person
-  - **delegation**
-    - binding a responsibility assigned to one person to another person ("let somebody else do the job")
+  - ***delegation***
+    - binding a responsibility, assigned to one person, to another person ("let somebody else do the job")
     - three reasons for delegation
       - time management
       - expertise
@@ -175,10 +180,10 @@
     - you can delegate authority, but not responsibility. You can only share responsibility.
 
 ### Project: activities, tasks and functions
-<br><img src="pics/project_af.png" width="400">
+  <img src="pics/project_af.png" width="400">
 - activity diagrams (prior PERT-chart)
-<br><img src="pics/house.png" width="400">
-<img src="src=pics/uml_project.png" width="400">
+  <br><img src="pics/house.png" width="400">
+  <img src="pics/uml_project.png" width="400">
 
 - **activities**
   - major unit of work
@@ -202,11 +207,11 @@
 
 ### simple dynamic model of a project
 - every project has at least 5 states
-  - **conception** - the idea is born
-  - **definition** - a plan is developed
-  - **start** - teams are formed
-  - **steady state** - the work is being done
-  - **termination** - the project is being finished
+  1. **conception** - the idea is born
+  2. **definition** - a plan is developed
+  3. **start** - teams are formed
+  4. **steady state** - the work is being done
+  5. **termination** - the project is being finished
 - UML model:
   <br><img src="pics/states_project.png" width="400">
 - **common mistakes**
@@ -231,7 +236,7 @@
   - be a leader
 
 - stages of a software project:
-<br><img src="pics/stages_1.png" width="400">
+<br><img src="pics/stages_1.png" width="400"><br>
 <img src="pics/stages_2.png" width="400">
 
 

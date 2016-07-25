@@ -1,12 +1,15 @@
 ## ***OCL (Object constraint language)***
+- OCL is part of the UML standard
 - OCL is based on predicate calculus
+- OCL is used to express constraints, that cannot be modeled in UML
 - an ***OCL contract*** is the set of all the invariants, preconditions and postconditions associated with a class diagram
-### OO-contract
+### ***contract***
 - an oo contract is an exact specifiaction of the interface of the object. a contract inlucdes three types of predicates
   1. *invariant*: A predicate that is always true for all instances of a class
-  2. *precondition*: A predicate that must be true before an operation is invoked
-  3. *postcondition*: A predicate that must be true after an operation is invoked
+  2. *precondition*("rights"): A predicate that must be true before an operation is invoked
+  3. *postcondition*("obligations"): A predicate that must be true after an operation is invoked
 - A contract is called a formal specification, if the invariants, preconditions (“rights” and postconditions (“obligations”) in the contract are unambiguous
+- a contract restricts the model space (it constrains, what can be initiated)
 
 ### why not use *contracts* during analysis?
 Advantage:
@@ -24,11 +27,15 @@ Trade-offs:
 4. Testing
   - If tests are generated early, do they require the level of precision of a contract?
 
-### ***OCL***: object constraint language
+### ***OCL***:
 - *OCL*: a formal language for expressing constraints over a set of objects in a model
 - declarative: so side effects, no control flow
 - based on sets, multi sets, sequences
 - **OCL is a predicate language, declarations only, no "if then else"!**
+  - no side effects, not control flow
+- OCL expressions evaluate to true of false
+  - evaluated either in the context of a class or in the context of an operation
+  - constraints apply to all instances
 
 #### OCL expressions and OCL types
 - Operands in OCL expressions are objects and properties
@@ -71,6 +78,7 @@ Trade-offs:
       - **parts *3*, *4* and *5* are optional and can be chained**
   - or a "value assignment" following OCL syntax (*not, and, or, implies, equals, xor*)
     - instead of `=` you use `equals`
+    - **there is no such thing as a "value assignment" in OCL, the value assignment is expressed indirect by "the variable should have the value xy in the end"!**
 
 - pre- / postconditions
   - it is possible to specify the the time window of validity the constraint describes

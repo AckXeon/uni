@@ -1,0 +1,11 @@
+# Modeling the Software Lifecycle
+- IEEE Standard 1074-2006 for Software Lifecycles
+- Software life cycle models
+  - Sequential models
+    - Waterfall model
+    - V-model
+  - Iterative models
+   - Boehm’s spiral model
+   - V-Model XT
+   - Unified Process
+  - Agile models

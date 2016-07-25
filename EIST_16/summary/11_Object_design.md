@@ -1,7 +1,7 @@
 \# includes L10
 
 ## Object design
-- modeling must adress our mental limitations
+- modeling must address our mental limitations
   - good models deal with this limitation, because
     - they do not tax the mind
     - they reduce complexity
@@ -12,7 +12,7 @@
   - prepare the implementation of the system model based on design decisions
   - transform the system model (optimize it)
 - investigate alternative ways to implement the system model
-  - use design goals (eg. minimize exec time, momory, ...)
+  - use design goals (eg. minimize exec time, memory, ...)
 - Object design serves as the basis of implementation
 
 

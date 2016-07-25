@@ -28,6 +28,16 @@
 ### ***taxonomy of design patterns***
 <img src="pics/taxonomyofdesignpatterns.png" width="500">
 
+### Typical design goals adressed by design patterns
+- ***Extensibility*** (Expandability)
+  - A system is extensible, if new functional requirements can easily be added to the existing system
+- ***Customizability***
+  - A system is customizable, if new nonfunctional requirements can be addressed in the existing system
+- ***Scalability***
+  - A system is scalable, if existing components can easily be multiplied in the system
+- ***Reusability***
+  - A system is reusable, if it can be used by another system without requiring major changes in the existing system model (design reuse) or code base (code reuse)
+
 ## Patterns:
 ### ***the facade pattern***
 - a facade provides a unified interface for a subsystem
