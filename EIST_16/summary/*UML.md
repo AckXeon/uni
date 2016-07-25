@@ -18,6 +18,14 @@
     - eg: `maxNumTest:int` method, that returns an int
       - `e:String` *e* is a variable of type *String*
 - in eg. class diagrams, conditions like `a!=null` are notated as a ***note*** on the class (eg. `<<postcondition >> a!= null` for OCL contracts)
+- abstract classes are denoted in *italic* font if by adding `{abstract}` to the class name
+
+#### Associations
+- notation:
+  - name
+  - multiplicity
+  - description
+  - in context of implementation near diagrams: navigability
 
 ### The Class Diagram
 - class diagrams represent the **structure of the system**
@@ -34,7 +42,7 @@
   - **inheritance**: triangle, ([target]<---"is one of"---[origin])
   - **aggregation**: diamond, "consists of"-hierarchy ([aggregate]<>---"consists of"--num-[component])
     - **composition**: solid black diamond, "cannot exist without" (bidirectional)
-  - **attributes and methods:**
+  - **attributes and methods: visibility modifiers**
     - `+` public
     - `-` private
     - `#` package (**not** Javas package logic!)
