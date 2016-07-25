@@ -16,8 +16,8 @@
 - **communication mechanism**
   - tools to transmit information
   - synchronous
-  - asynchronous (sender and receiver are not communication at the same time)<br>
-<img src=pics/communication.png" width="400">
+  - asynchronous (sender and receiver are not communication at the same time)
+  <br><img src="pics/communication.png" width="400">
 
 ### communication events
 **planned communication events**
@@ -73,7 +73,7 @@
   - a **schedule**
   - technical and managerial **activities** to produce and deliver the deliverables
   - **resources** consumed by the activities
-<img src=pics/project.png" width="400">
+  <br><img src="pics/project.png" width="400">
 
 - laws of project management
   - projects progress quickly until they are ~90% complete
@@ -82,11 +82,11 @@
   - murphy's law:
     - "if something can go wrong, it will"
 - what makes a project successful
-<img src=pics/succ_project.png" width="400">
+  <br><img src="pics/succ_project.png" width="400">
 
 ## Project organisation
 - a project organization defines the relationships among resources, in particular the participants, in a project
-<img src=pics/organisation.png" width="400">
+  <br><img src="pics/organisation.png" width="400">
 
 - a project organization should define:
   - who decides
@@ -139,7 +139,7 @@
     - requirements are changing during development
 
   - organization and communication:
-  <img src=pics/organizationUML.png" width="400">
+  <br><img src="pics/organizationUML.png" width="400">
 
 ## Roles in Software Organization
 - **Role**
@@ -175,10 +175,10 @@
     - you can delegate authority, but not responsibility. You can only share responsibility.
 
 ### Project: activities, tasks and functions
-<img src=pics/project_af.png" width="400">
+<br><img src="pics/project_af.png" width="400">
 - activity diagrams (prior PERT-chart)
-<img src=pics/house.png" width="400">
-<img src=pics/uml_project.png" width="400">
+<br><img src="pics/house.png" width="400">
+<img src="src=pics/uml_project.png" width="400">
 
 - **activities**
   - major unit of work
@@ -197,7 +197,7 @@
   - a task must have a completion criteria
 
 - model of tasks, activities, roles, work products and packages
-<img src=pics/task.png" width="400">
+  <br><img src="pics/task.png" width="400">
 
 
 ### simple dynamic model of a project
@@ -208,7 +208,7 @@
   - **steady state** - the work is being done
   - **termination** - the project is being finished
 - UML model:
-<img src=pics/states_project.png" width="400">
+  <br><img src="pics/states_project.png" width="400">
 - **common mistakes**
   - project manager skipping the start phase
     - reasons for skipping
@@ -231,13 +231,13 @@
   - be a leader
 
 - stages of a software project:
-<img src=pics/stages_1.png" width="400">
-<img src=pics/stages_2.png" width="400">
+<br><img src="pics/stages_1.png" width="400">
+<img src="pics/stages_2.png" width="400">
 
 
 #### Some structures:
-<img src=pics/commStruc.png" width="400">
-<img src=pics/descStruc.png" width="400">
-<img src=pics/descStruc2.png" width="400">
-<img src=pics/hierstruc.png" width="400">
-<img src=pics/hierstruc2.png" width="400">
+<img src="pics/commStruc.png" width="400">
+<img src="pics/descStruc.png" width="400">
+<img src="pics/descStruc2.png" width="400">
+<img src="pics/hierstruc.png" width="400">
+<img src="pics/hierstruc2.png" width="400">
