@@ -1,0 +1,52 @@
+\# includes 
+
+### types of modeling
+- functional modeling
+  - describe the functionality of the system
+  - the functional model is described with scenarios, use cases
+  - purpose:
+    - identification of functional requirements
+    - delivery of new operations (methods) for the object model
+- object modeling
+  - describe the structure of the system
+  - purpose:
+    - identify the structure of the system
+    - is the center of the modeling activities
+- dynamic modeling
+  - describe the dynamic behavior of the system
+  - the dynamic model is described with
+    - state diagrams
+      - one state diagram per class with interesting dynamic behavior
+    - sequence and communication diagrams
+      - for the interaction between classes
+  - purpose:
+    - identification of new classes for the object model and identification of supply operations for the classes
+- **modeling is iterative**
+
+### identify classes and operations, objects
+- identifications of classes and operations from the dynamic model
+  - **sources for class identification**:
+    - application domain analysis
+      - find classes by talking to the client
+      - find abstractions by observing the end user
+    - general world knowledge and intuition
+    - textual analysis (of event flow in use cases)
+    - activities in state chart diagrams are candidates for public operations in classes
+    - activity lines in sequence diagrams are candidates for objects
+- **detecting operations**
+  - look at the flow of events in a use case description
+  - from the flow of events proceed to the sequence diagram to find the participating objects
+- **Event**
+  - something that happens at a point of time
+  - sends information from one model to another
+  - events can have associations with each other
+    - casually related (happens before / after)
+    - casually unrelated (happen concurrently)
+  - can be grouped into event classes with a hierarchical structure (for example Java's exception hierarchy)
+  - term "event" is used in two ways
+    - instance of an event class ("update slide")
+    - value of the attributes of an event class ("updated on 11:55")
+- **finding the participating objects**
+  - start with the flow of events
+  - events always have a sender and receiver ( --> messages between two objects)
+  - these are often the participating objects
