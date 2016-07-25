@@ -109,8 +109,14 @@
 - The existence of the Receiver makes sure, that the Client cannot misuse the Delegate object.
 <img src="pics/deleg.png" width="400">
 
+### specification inheritance
+- the parent class is abstract, it provides a specification for the child class
+- eg: Java interfaces
+
 ### Delegation vs Implementation Inheritance
-- *Inheritance*: Extending a Base class by a new operation or overriding an existing operation
+- Implementation inheritance is private inheritance
+- the parent class provides more than just a specification (eg. implemented methods)
+- *Implementation Inheritance*: Extending a Base class by a new operation or overriding an existing operation
   - pro: Flexible, because any object can be replaced at run time by another one (as long as it has the same type)
   - con: Inefficient, because objects are encapsulated
 - *Delegation*: Catching an operation and sending it to another object
@@ -121,9 +127,7 @@
     - Inheritance exposes a subclass to the details of its parent class
   - con:
     - Any change in the parent class implementation force the subclass to change (which requires recompilation).
-
-### specification inheritance
-- eg: implementation of interfaces / abstract classes
+- eg. java abstract classes
 
 #### Abstract Operations in Java: Method Overriding and Strict Inheritance
 - *Method overriding*

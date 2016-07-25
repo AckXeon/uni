@@ -1,18 +1,18 @@
 \# includes L11
 
-## ***design patterns***
-### software engineering knowledge
+# ***design patterns***
+## software engineering knowledge
 - software engineering knowledge is not only a set of ***algorithms***
 - it also contains a catalog of ***patterns*** describing generic solutions for recurring problems
 
-#### ***algorithm***
+### ***algorithm***
   - a method for solving a problem using a finite sequence of well defined instructions
   - starting from an initial state, the algorithm proceeds though a series of successive states, eventually termination in a final state
 
-#### ***pattern***
+### ***pattern***
   - „A pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem in such a way that you can use this solution a million times over, without ever doing it the same way twice“
 
-### 3 types of patterns
+## 3 types of patterns
 - ***structural patterns***
   - reduce coupling between two or more classes
   - introduce an abstract class to enable future extensions
@@ -25,18 +25,18 @@
   - allow to abstract from complex instantiation processes
   - make the system independent from the way its objects are created, composed and represented
 
-#### ***taxonomy of design patterns***
+### ***taxonomy of design patterns***
 <img src="pics/taxonomyofdesignpatterns.png" width="500">
 
-### Patterns:
-#### ***the facade pattern***
+## Patterns:
+### ***the facade pattern***
 - a facade provides a unified interface for a subsystem
   - a facade consists of a set of public operations
   - each public operation is delegated to one or more operations in the classes behind the facade
 - A facade defines a higher-level interface that makes the subsystem easier to use (i.e. it abstracts out the gory details)
 - A facade allows to hide design spaghetti from the caller
 
-#### ***the proxy pattern***
+### ***the proxy pattern***
 - the proxy pattern can be used for
   - **access control** (*Protection proxy*)
     - the ***ProxyObject*** provides protection for the real object
@@ -50,7 +50,7 @@
 - proxy pattern in UML:
   <img src="pics/proxyUML.png" width="400">
 
-#### ***the adapter pattern***
+### ***the adapter pattern***
 - adapter pattern: connects incompatible components
   - reuse of existing components
   - converts the interface of the existing component into another interface expected by the calling component
@@ -59,7 +59,7 @@
   <img src="pics/adapterUML.png" width="400">
 
 
-#### ***the composite pattern***
+### ***the composite pattern***
 - represents hierarchic structures
 - models tree structures that represent *part-whole hierarchies*
 - allows to treat individual objects and groups of objects uniformly
@@ -71,7 +71,7 @@
 
 <img src="pics/comppatt.png" width="400">
 
-#### ***the strategy pattern***
+### ***the strategy pattern***
 - used if there are multiple solutions for a task, one shall be selected at runtime
 - **the decision is made (by a policy) at runtime**
 - problem: different solutions (often: algorithms) exists for a specific task
@@ -80,10 +80,10 @@
 
 <img src="pics/stratpatt.png" width="400">
 
-#### the abstract factory
+### the abstract factory
 - ~slide 30
 
-#### ***the bridge pattern***
+### ***the bridge pattern***
 - the bridge pattern can be used to provide multiple implementations under the same interface (eg. interface to a component that is incomplete, not yet known or unavailable during testing)
 - **similar to the strategy pattern, but the decisions are final**
 - problem: many design decisions are made final at design time or at compile time
@@ -104,7 +104,7 @@
   <img src="pics/bridgepatt.png" width="400">
   <img src="pics/degbridgepatt.png" width="400">
 
-#### ***the observer pattern***
+### ***the observer pattern***
 - allows to model a problem that has multiple views, and the views should be consistent
 - used when there is a object that changes state quite often
 - allows multiple views of the current state
@@ -135,7 +135,7 @@
 **4 different types of observers**
 <img src="pics/observertypes.png" width="400">
 
-#### ***Model-View-Controller***
+### ***Model-View-Controller***
   - problem: in systems with high coupling any change to the boundary objects (user interface) often force changes to the entity objects (data)
   - solution: decoupling
     - *view*: a subsystem containing boundary objects
