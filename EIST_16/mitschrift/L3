@@ -1,0 +1,57 @@
+#
+
+## UML
+> UML is beautiful, it allows the usage of the same notation for all the steps of the design
+
+### general notation
+- `[x1][:t1]` where
+  - `x1` is of the type
+  - `t1`
+    - eg: `maxNumTest:int` method, that returns an int
+      - `e:String` *e* is a variable of type *String*
+- in eg. class diagrams, conditions like `a!=null` are notated as a ***note*** on the class (eg. `<<postcondition >> a!= null` for OCL contracts)
+### The Class Diagram
+- class diagrams represent the **structure of the system**
+- **notation**:
+  - classes are shown as rectangles
+    - italic -> *abstract class*
+  - associations are shown as lines
+    | [classname]  |
+    |--------------|
+    | [attributes] |
+    | [methods()]  |
+  - attributes in the second field from top
+  - methods in third field from top
+  - **inheritance**: triangle, ([target]<---"is one of"---[origin])
+  - **aggregation**: diamond, "consists of"-hierarchy ([aggregate]<>---"consists of"--num-[component])
+    - **composition**: solid black diamond, "cannot exist without" (bidirectional)
+  - **attributes and methods:**
+    - `+` public
+    - `-` private
+    - `#` package (**not** Javas package logic!)
+- multiplicities are notated on the specific side of the association, default is 1
+- 3 Types of objects:
+  - **entity objects**
+    - neither of the ones below
+  - **control objects**
+    - "allows to control the entity objects"
+  - **boundary objects**
+    - "user interface"
+- ***qualified association***: used to select an object (or objects) from a larger set of related objects, based upon the qualifier key. Informally, in a software perspective, it suggests looking things up by a key, such as objects in a HashMap.
+  - also see [chapter: UML->Associations]
+### instance diagram
+- instances declares in rectangles (see class diagram)
+  - `[instance:][class]`<br>
+    where:
+    - `[instance]` is optional and declares an instance of `[class]`
+    - `[class]` is the actual class
+  - names are underlined to notate an actual instance
+  - instances are *linked* with each other (*X-to-X* association)
+
+## usage of models
+- models are used in 3 types of activities
+  - **communication**: an abstraction, that enables people to discuss a system, even if it has not been built yet
+    - informal drawing
+  - **analysis and design**: an abstraction, that allows to reason about a system.
+    - Expressed in UML
+  - **Archive**: compact representation for storing a design for future systems

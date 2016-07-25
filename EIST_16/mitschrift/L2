@@ -1,0 +1,98 @@
+
+## dealing with complex problems
+  - **Abstraction** (identification of classes and objects)
+    - **DEF:** Classification of phenomena into concepts
+    - group collection of objects to reduce complexity
+    - allows to ignore unessential details
+      - Abstraction as an **activity** "abstraction is a thought process where ideas are distanced from objects"
+      - Abstraction as an **entity** "abstraction is the resulting idea of a thought process where an idea has been distanced from an object"
+    - Ideas can be expressed with a model
+
+  - **Decomposition** (modules, subsystems, packages)
+    - "divide and conquer"
+    - two major types of decomposition
+      - functional decomposition
+        - the system can be decomposed into functions
+        - functions can be decomposed into smaller functions
+      - object-oriented decomposition
+        - the system is decomposed into classes ("objects")
+        - classes can be decomposed into smaller classes
+    - **functional decomposition**
+      - the functionality is spread all over the system
+        - source code is hard to understand
+        - source code is complex and impossible to maintain
+        - the user interface is often awkward and non-intuitive
+      - consequence:
+        - the maintainer must often understand the whole system before making a single change to the system
+    - **object-oriented decomposition**
+      - decompose a system by having a lot of subsystems
+      - "looks beautiful from outside, a lot of mess inside"
+
+  - **Hierarchy**
+    - "part-of" hierarchy
+    - "is-kind-of" hierarchy
+    - models relationships between objects
+    - UML:
+      - _diamond_ -> "[target] consists of [origin]" (Aggreagtion)
+      - _star // number_ -> multiplicity
+      - _triangle_ -> "[target] is either [origin 1] or [origin 2,...,n]" (Inheritance)
+
+  - **approach**
+    - start with a description of the functionality of a system
+    - then proceed to a description of its structure
+- **Project types**
+  - **greenfield engineering project**
+    - a system like this never existed before, begin from scratch
+  - **reengineering project**
+    - reuse classes from prior existing systems
+  - **interface engineering project**
+    - rebuilding the interface (desktop -> mobile)
+- **Concepts and Phenomena**
+  - Phenomenon
+    - an object in the world of a domain as you perceive it
+  - concept
+    - describes the common properties of a phenomena
+  - A concept is a 3-tuple:
+    - [name, purpose, members]
+
+## **Modeling**
+  - **DEF:** Development of abstractions to answer specific questions about a set of phenomena while ignoring irrelevant details
+
+  - **relationships:**
+    - Type <-> variable
+    - Concept <-> phenomenon
+    - class <-> object
+  - **Abstract data type**
+    - a type whose implementation is hidden from the rest of the system
+  - **class**
+     - an abstraction in the context of object oriented languages
+     - a class encapsulates state and behavior
+
+  - **system**
+    - a _system_ is an organized set of communicating part
+      - natural systems
+      - engineered system
+  - **systems, models and views**
+    - a _model_ is an abstraction describing a system
+    - a _view_ depicts selected aspects of the system
+    - a _notation_ is a set of graphical or textural rules for depicting models and views
+      - _informal notation_ aka _napkin design_
+      - _formal notation_ for example _UML_
+    - views and models of a complex system often overlap
+
+## Object-oriented modeling
+  - _**Application Domain**_
+    - Process of analysis
+    - the environment in which the system is operation
+  - _**Solution Domain**_
+    - process of solution finding
+    - the technologies used to build the system
+
+### UML
+- A standard for modeling software systems
+- All UML Diagrams denote graphs of nodes and edges
+  - **nodes** are entities in the application or solution domain
+    - rectangles denote classes / instances / system boundaries
+    - ovals denote functions
+    - names of instances are underlined, those of classes not
+  - **edges** between nodes denote a relationship / association between the corresponding entities

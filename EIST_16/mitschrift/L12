@@ -1,0 +1,22 @@
+
+Class user: "call the class"
+class implementor: "realize the class"
+class extender: "refine the class"
+
+## Interface Specification
+1) Interface specification during requirements analysis
+  - identification of attributes and operations
+  - no need to specify types or their parameters
+2) interface specification during object design
+  - add type signature information
+  - add visibility information
+  - add contracts
+
+### information hiding heuristics
+- carefully define the public interface for classes as well as subsystems
+- always apply the "need to know" principle
+- the fewer details a class user has to know
+  - the easier the class can be changed
+  - the less likely the class user will be affected by any changes
+- good rule: make attributes always private
+- trade-off: information hiding vs. efficiency

@@ -1,0 +1,41 @@
+# Testing II
+
+## Fault Tolerance
+
+### Exception handling
+- Exception handling is a better way to deal with a failure than letting a system crash
+  - but programmers must foresee the failure
+- Exceptions are a better way to give an error report to the caller
+- **robustness**: robustness is the ability of a system to come with errors during execution and cope with erroneous input
+- **unchecked exception**: it is the responsibility of the caller to check for erroneous input
+-**checked exception**: it is the responsibility of the callee to check for erroneous input
+- robustness is a good design goal
+
+- refactoring steps to replace error code
+  - find the methods that use error code
+  - replace error code with checked / unchecked exception code
+
+- what constitutes successful testing
+  - the purpose of testing is the generation of failures
+  - "the test is successful, if it generates a failure"
+
+Terminology
+- **Failure**: any deviation of the observed behavior from the specified behavior
+- **fault**: the mechanical or algorithmical cause of an error
+- **error**: the system is in a state such that fuŕther processing by the system can lead to a failure
+- **verification**: Activity that checks if the observed behavior complies with the specified behavior of a system
+- **validation**: Activity that checks if the observed behavior meets the needs informally expressed by a stakeholder
+
+### JUnit
+- A java framework for running unit tests
+- the newest version of JUnit uses Java **annotations** and **assertions**
+- JUnit is good for testing the state of a SUT
+- limitations:
+  - JUnit does not provide mechanisms to test a specific sequence of operations
+
+### Object-oriented model based testing
+- the test model is derived from the system model (which contains the SUT)
+- objects of this model are called test doubles
+- *mock objects* are used to mimic the behavior of a real object
+
+### Mock object pattern

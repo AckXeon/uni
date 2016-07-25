@@ -1,0 +1,33 @@
+
+## UML III
+
+### Sequence diagrams
+- Sequence diagrams are distinguished into two structures
+  - *Fork diagrams*
+    - The dynamic behavior is placed in a single object, usually a control object
+      - it knows all the other objects and talks to them directly
+  - *stair diagrams*
+    - The dynamic behavior is distributed. Each object delegates responsibility to other objects
+      - each object only knows a few of the other objects and knows, which objects can help with a specific behavior
+  - stair vs. fork
+    - stair: decentralized control structure
+      - the operations have a strong connection
+      - the operations are always performed in the same order
+    - fork: centralized control structure
+      - the operations can change order
+      - new operations are expected to be added
+
+  - heuristics for sequence diagrams
+    - column layout - from left to right
+      - 1st column: *actor* of the use case
+      - next columns: *boundary objects*
+      - next columns: *control objects*, that manage the rest ob the use case
+      - remaining columns: *entity objects*
+
+      ![heuristicsforseqdia](pics/heuristicsforseqdia.png)
+    - order in the creation of objects
+      - create control objects at the beginning of the flow of events
+      - the control objects then create the boundary objects
+    - access of objects
+      - control / boundary objects can access entity objects
+      - entity objects should not access boundary objects

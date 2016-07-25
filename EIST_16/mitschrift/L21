@@ -1,0 +1,9 @@
+- slide 18, 19,
+
+### State pattern
+- the context is the class that can have a number of internal states, it presents a single interface to the outside world
+- the state interface defines a common interface for all concrete states; the states all implement the same interface so they are interchangable
+  - there are usually as many concrete states as there are internal states
+- concrete states handle requests from the context and define state-specific behavior
+- each concrete state provides its own implementations for a request. in this way, when the context changes state its behavior as well
+![statepattern](pics/statepattern.png)

@@ -1,0 +1,10 @@
+# UML cheat sheet
+
+## naming
+- abstract: italic
+- object: normal font
+
+## visibility information:
+  - "+" public
+  - "-" private
+  - "#" protected

@@ -1,0 +1,187 @@
+## ***design patterns***
+### software engineering knowledge
+- software engineering knowledge is not only a set of ***algorithms***
+- it also contains a catalog of ***patterns*** describing generic solutions for recurring problems
+
+#### ***algorithm***
+  - a method for solving a problem using a finite sequence of well defined instructions
+  - starting from an initial state, the algorithm proceeds though a series of successive states, eventually termination in a final state
+
+#### ***pattern***
+  - „A pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem in such a way that you can use this solution a million times over, without ever doing it the same way twice“
+
+### 3 types of patterns
+- ***structural patterns***
+  - reduce coupling between two or more classes
+  - introduce an abstract class to enable future extensions
+  - encapsulate complex structures
+- ***behavioral patterns***
+  - allow choice between algorithms (at runtime)
+  - allow the assignment of responsibilities to objects
+  - model complex control flows that are difficult to follow at runtime
+- ***creational patterns***
+  - allow to abstract from complex instantiation processes
+  - make the system independent from the way its objects are created, composed and represented
+
+#### ***taxonomy of design patterns***
+<img src="pics/taxonomyofdesignpatterns.png" width="500">
+
+### Patterns:
+#### ***the facade pattern***
+- a facade provides a unified interface for a subsystem
+  - a facade consists of a set of public operations
+  - each public operation is delegated to one or more operations in the classes behind the facade
+- A facade defines a higher-level interface that makes the subsystem easier to use (i.e. it abstracts out the gory details)
+- A facade allows to hide design spaghetti from the caller
+
+#### ***the proxy pattern***
+- the proxy pattern can be used for
+  - **access control** (*Protection proxy*)
+    - the ***ProxyObject*** provides protection for the real object
+    - Good when different actors should have different access and viewing rights for the same object
+  - **caching of information** (*remote proxy*)
+    - The Proxy object is a local representative for an object in a different address space
+    - Good when information does not change too often
+  - **standin** ("*virtual proxy*")
+    - The real object is too expensive to create or too expensive to download
+    - Good when the real object is not accessed too often
+- proxy pattern in UML:
+  <img src="pics/proxyUML.png" width="400">
+
+#### ***the adapter pattern***
+- adapter pattern: connects incompatible components
+  - reuse of existing components
+  - converts the interface of the existing component into another interface expected by the calling component
+  - useful in interface engineering projects and reengineering projects<br>
+
+  <img src="pics/adapterUML.png" width="400">
+
+
+#### ***the composite pattern***
+- represents hierarchic structures
+- models tree structures that represent *part-whole hierarchies*
+- allows to treat individual objects and groups of objects uniformly
+- individual objects called *leaf* and *composite*
+- problem:
+  - Many modeling problems can be solved by representing them as hierarchies with arbitrary depth and width
+- solution:
+  - The Composite Pattern lets a client treat an individual class called Leaf and compositions of Leaf classes *uniformly* <br>
+
+<img src="pics/comppatt.png" width="400">
+
+#### ***the strategy pattern***
+- used if there are multiple solutions for a task, one shall be selected at runtime
+- **the decision is made (by a policy) at runtime**
+- problem: different solutions (often: algorithms) exists for a specific task
+  - we want to switch between these solutions at run time (eg. different sorting algorithms / network connections over wifi,eth,lte)
+  - if we need a new solution, we want to add it without disturbing the application or the other solutions
+
+<img src="pics/stratpatt.png" width="400">
+
+#### the abstract factory
+- ~slide 30
+
+#### ***the bridge pattern***
+- the bridge pattern can be used to provide multiple implementations under the same interface (eg. interface to a component that is incomplete, not yet known or unavailable during testing)
+- **similar to the strategy pattern, but the decisions are final**
+- problem: many design decisions are made final at design time or at compile time
+- sometimes it is desirable to delay design decisions until run time
+- the bridge pattern allows to delay the binding between an interface and its subclass to the start-up time of the system
+
+- comparison to the adapter:
+  - similar:
+    - both hide details of the underlying system
+  - difference:
+    - the adapter pattern is geared towards making unrelated components work together
+      - applied to systems that are already designed (reengineering, interface engineering projects)
+      - "inheritance followed by delegation"
+    - a bridge id used up-front in a design to let abstractions and implementations vary independently
+      - green field engineering of an "extensible" system
+      - "delegation followed by inheritance"
+
+  <img src="pics/bridgepatt.png" width="400">
+  <img src="pics/degbridgepatt.png" width="400">
+
+#### ***the observer pattern***
+- allows to model a problem that has multiple views, and the views should be consistent
+- used when there is a object that changes state quite often
+- allows multiple views of the current state
+- **requirements**:
+  - the system should maintain consistency across the (redundant) views, whenever the state of the observes object changes
+  - the system should be highly extensible
+- kind of degenerated MVC
+- models a 1-to-many dependency between objects
+- usage:
+  - maintaining consistency across redundant states
+  - optimizing a batch of changes to maintain consistency
+- 3 variants for maintaining consistency:
+  - *push notification*: every time the state of the subject changes, all the observers are notified of the change
+  - *push-update notification*: the subject also send the state that has been changed to the observers
+  - *pull notification*: an observer inquires about the state of the subject
+- any view can change the state of the model
+- 4 different types of observers (also see UML below)
+  - PullObserver, PushNotificationObserver, PushPullObserver, PushUpdateObserver
+
+- the *subject* represents the entity object
+- *observers* attach to the subject by calling subscribe()
+- each *observer* has a different view of the state of the entity object
+  - the state is contained in the subclass *concreteSubject*
+  - the state can be obtained and set by subclasses of type *concreteObserver*<br>
+
+**the observer pattern**
+<img src="pics/observeruml.png" width="400"><br>
+**4 different types of observers**
+<img src="pics/observertypes.png" width="400">
+
+#### ***Model-View-Controller***
+  - problem: in systems with high coupling any change to the boundary objects (user interface) often force changes to the entity objects (data)
+  - solution: decoupling
+    - *view*: a subsystem containing boundary objects
+    - *model*: a subsystem containing entity objects
+    - *controller* a subsystem mediating between the views and the models
+  - *model subsystem*:
+    - responsible for application domain knowledge
+  - *view subsystem*:
+    - responsible for displaying information to the user
+  - *controller subsystem*:
+    - responsible for interacting with the user and notifying view of changes in the model
+
+  <img src="pics/mvcuml.png" width="400">
+
+### the template pattern
+- used, when several subclasses share the same algorithm but differ on the specifics
+- approach: the common steps of the algorithms are factored out into an abstract class
+  - abstract methods for each of these steps
+  - subclasses provide the realization of each of the steps
+- template method pattern uses *inheritance* to vary part of an algorithm
+  - difference to *strategy pattern*: the strategy pattern uses delegation to vary the entire algorithm
+- template pattern is mainly used in frameworks
+
+### State pattern
+- the context is the class that can have a number of internal states, it presents a single interface to the outside world
+- the state interface defines a common interface for all concrete states; the states all implement the same interface so they are interchangable
+  - there are usually as many concrete states as there are internal states
+- concrete states handle requests from the context and define state-specific behavior
+- each concrete state provides its own implementations for a request. in this way, when the context changes state its behavior as well
+- properties
+  - useful for objects that change state at runtime
+  - uses polymorphism to define different behaviors for different states of an object
+  - the selection of the subclass depends on the state of the object
+- Comparison with Bridge pattern:
+  - In the bridge pattern, the selection of the subclass is done at system initialization time
+- Comparison with Strategy pattern:
+  - In the strategy pattern, the selection of the subclass depends on an external policy<br>
+  <img src="pics/statepattern.png" width="400">
+
+#### Summary of design patterns
+- composite, adapter, bridge, proxy (structural patterns)
+  - focus: composing objects to form larger structures
+    - realize new functionality from old functionality
+    - provide flexibility and extensibility
+- strategy, observer, template, bridge (behavioral pattern)
+  - focus: algorithms and assignment of responsibilities to objects
+    - avoid tight coupling to a particular solution
+    - strategy: switch between algorithms at runtime
+    - observer: keep multiple views of a model consistent
+    - template: vary part of an algorithm
+    - bridge: provide multiple implementations under the same interface

@@ -1,0 +1,637 @@
+# SOFTWARE ENGINEERING
+
+Software Engineering is a collection of techniques,
+methodologies and tools that help with the
+production of a __high quality__ software system developed with a
+given __budget__ before a given __deadline__
+while __change__ occurs
+
+<p align="right" style="margin-top: 2cm; margin-bottom: -1cm;">3 May 2016
+# System Modeling
+
+## Models
+- used to discuss a system in natural language or informal drawing
+- used to analyze and design an abstraction that allows to reason about a system
+- used to create a compact representation for storing a
+ design
+
+#### Functional decomposition
+- The system is decomposed into functions
+- Functions can be decomposed into smaller
+functions
+
+#### Object-oriented decomposition
+- The system is decomposed into classes
+- Classes can be decomposed into smaller classes
+
+#### Application Domain
+- environment in which the system is operating
+
+#### Solution Domain
+- technologies used to build the system
+
+## Object Types
+#### Entity Objects
+- `<<entity>>`
+- represent persistent information tracked by the system
+
+#### Boundary Objects
+- `<<boundary>>`
+- represent the interaction between user and system
+
+#### Control Objects
+- `<<control>>`
+- represent the control tasks to be performed by the system
+
+## Other Stereotypes
+- `<<constructor>>`
+- `<<getter>>`
+- `<<setter>>`
+- `<<interface>>`
+- `<<extend>>`
+- `<<include>>`
+
+## Associations
+- denote relationships between classes
+- __multiplicity__ denotes how many objects the instance of a class can reference
+
+# UML Diagrams
+#### Use Case Diagram
+- describe functional behavior of the system as seen by the user
+
+#### Class Diagram
+- describe static structure of the system: objects, attributes, associations
+
+#### Sequence Diagram
+- describe event flow of an interaction between objects
+
+#### State Chart Diagram
+- describe dynamic behavior of an individual object
+
+#### Activity Diagram
+- describe dynamic behavior between objects of the system
+
+#### Communication Diagram
+- shows the interaction between objects and their links, flow of messages between the objects
+
+## Use Case Diagram
+- __actor__ represents user of the system
+- __use case__ represents functionality provided by the system
+
+## Class Diagram
+- identify the structure of the system
+- delivery of new methods for the object model
+- can be generated from problem statements using __Abbot's technique__
+
+#### Aggregation
+- "consists-of" hierarchy
+- empty diamond, pointing at aggregate
+- aggregate is the parent class, component is the child class
+
+#### Composition
+- form of aggregation
+- solid diamond, pointing at aggregate
+- component can not exist without aggregate
+
+## Sequence Diagram
+- used during __analysis__ to find participating objects and operations on these objects
+- used during __system design__ to refine subsystem dependencies
+- describes one specific activity based on a certain use-case, focus on the control flow and data flow
+- Class instances are identified by a prefix colon,
+and its name is underlined
+- column layout (from left to right) actor, boundary objects, control objects, entity objects
+
+## State Chart Diagram
+- `Event(attr) [condition]/activity`
+- generalization of finite state automata
+- use control nodes to navigate between the states
+- self transitions are used where the target state is identical with the destination state
+
+#### States
+- abstraction of the attributes of a class
+- equivalence class of all those attribute values that do not need to be distinguished
+
+## Activity Diagram
+- consist of nodes and edges
+- __node__ describes an activity or an object
+- __edge__ is a directed connection between nodes
+- activities can be grouped into __swimlanes__ to organize by actors
+
+#### Node
+- Object Node ``Object Name``
+- Executable Node ``Action Name``
+- Control Node
+
+#### Edge
+- Control flow edge
+- Object flow edge
+
+## Control Nodes
+- coordinates the transition between other nodes
+- Initial node / Final node
+- Fork node / Join node
+- Choice node
+
+## Events
+- events happen at a point in time and send information from one object to another
+
+## Communication Diagram
+- different types of messages
+
+#### Messages
+- Sequential Messages (blocking) `1.1: buySandwich()`
+- Conditional Messages (blocking) `1a:[money>beer.price]buyBeer()` `1b:receiveChange()`
+- Concurrent Messages (non-blocking)
+
+<p align="right" style="margin-top: 2cm; margin-bottom: -1cm;">10 May 2016
+# Requirements Engineering
+
+Combination of the two activities, requirements
+elicitation and analysis. An activity that __defines the requirements of the system__ under construction.
+
+- __Requirements Elicitation:__ definition of the system in terms understood by a __customer or user__
+
+- __Analysis:__ definition of the system in terms understood by a __developer__
+
+- __Requirement:__ feature that the system must have or a constraint it must satisfy to be accepted by the client. Identify the __what__ of the system, not the __how__
+
+## Parts of Requirements
+- Functionality
+- User interaction
+- Error handling
+- Interfaces
+
+## Types of Requirements
+
+#### Functional Requirements
+- What is the software supposed to do?
+- Interaction with people, hardware, software
+
+#### Nonfunctional Requirements
+- Performance (speed, availability)
+- Quality (usability, maintainability, safety)
+- Constraints (customer requirements e.g. operating environment)
+
+## Models in the System Model
+#### Functional Model
+- Use Case Diagram
+
+#### Object Model
+- Class Diagram
+
+#### Dynamic Model
+- State Chart Diagram
+- Activity Diagram
+- Sequence Diagram
+
+## Software Development Activities
+
+Activity | | Domain
+-- |
+Requirements Elicitation <br> Analysis | What is the problem? | Application Domain
+System Design <br> Object Design <br> Implementation <br> Testing | What is the solution? <br> What are the best data structures for the solution? <br> How is the solution constructed? <br> Is the problem solved? | Solution Domain
+Delivery <br> Maintenance/Evolution | Can the customer use the solution? <br> Are enhancements needed? | Application Domain
+
+## Requirements Validation
+#### Correctness
+- requirements represent the client's view
+
+#### Clarity
+- requirements can only be interpreted in one way
+
+#### Completeness
+- all possible ways of using the system are described
+
+#### Consistency
+- requirements don't contradict each other
+
+#### Realism
+- requirements can be implemented and delivered
+
+<p align="right" style="margin-top: 2cm; margin-bottom: -1cm;">12 May 2016
+# System Design
+#### 1. Identify Design Goals
+- Additional Nonfunctional Requirements
+- Design Trade-offs
+
+#### 2. Subsystem Decomposition
+- Layers vs Partitions
+- Architectural Style
+- Coherence & Coupling
+
+#### 3. Identify Concurrency
+- Identification of Parallelism (Processes, Threads)
+
+#### 4. Hardware/Software Mapping
+- Identification of Nodes
+- Special Purpose Systems
+- Buy vs Build
+- Network Connectivity
+
+#### 5. Persistent Data Management
+- Storing Persistent Objects
+- Filesystem vs Database
+
+#### 6. Global Resource Handling
+- Access Control
+- ACL vs Capabilities
+- Security
+
+#### 7. Software Control
+- Monolithic
+- Event-Driven
+- Conc. Processes
+
+#### 8. Boundary Conditions
+- Initialization
+- Termination
+- Failure
+
+## Analysis Model
+#### Nonfunctional Requirements
+- Definition of Design Goals
+
+#### Functional Model
+- Subsystem Decomposition
+
+#### Object Model
+- Hardware/Software Mapping, Persistent Data, Management
+
+#### Dynamic Model
+- Identification of Concurrency, Global Resource Handling, Software Control
+
+## Design Goals
+#### Client
+- Low cost
+- Increased productivity
+- Backward compatibility
+- Traceability of Requirements
+- Rapid development
+- Flexibility
+
+#### End User
+- Functionality
+- User-friendliness
+- Usability
+- Ease of learning
+- Fault tolerance
+- Robustness
+
+#### Developer
+- Minimum number of errors
+- Modifiability, Readability
+- Reusability, Adaptability
+- Well-defined interfaces
+
+#### Trade-offs
+- Functionality vs. Usability
+- Cost vs. Robustness
+- Efficiency vs. Portability
+- Rapid development vs. Functionality
+- Cost vs. Reusability
+- Backward Compatibility vs. Readability
+
+## Subsystems and Services
+
+#### Subsystem
+- Collection of classes, associations, operations, events that are closely interrelated with each other
+
+#### Service
+- Group of externally visible operations provided by a subsystem
+
+#### Subsystem Interface
+- Specifies the interaction and information flow between subsystems
+
+#### Application Programmer's Interface (API)
+- Specifies the Subsystem Interface in a specific programming language
+
+## Coherence and Coupling
+
+#### Coherence
+- dependency among classes
+- high coherence: classes perform similar tasks and are related via associations
+- low coherence: almost no associations
+
+  ##### high coherence can be achieved if most of the interaction is within subsystems, rather than across subsystem boundaries
+
+#### Coupling
+- dependency among subsystem
+- high coupling: changes will have high impact on the other subsystem
+- low coupling: change does not affect any other subsystem
+
+  ##### low coupling can be achieved if a calling class does not need to know anything about the internals of the called class (principle of information hiding)
+
+
+## Architectural Styles
+
+#### Layered Architecture
+- A layer only depends on service from lower layers and has no knowledge of higher Layers
+
+#### Closed Architecture
+- Each layer can only call operations from the layer below
+
+#### Open Architecture
+- A layer can call operations from any layer below
+
+#### Client/Server Architecture
+- One or more __Servers__ provide Service to instances of subsystems, called __Clients__
+- Each Client calls a service offered by the Server. The Server performs the service and returns to the Client
+
+#### Peer-to-Peer Architecture
+- Clients can be servers Servers and Servers can be Clients
+
+#### Model-View-Controller Architecture
+- Subsystems are classified into 3 different types
+- __Model:__ application domain knowledge
+- __View:__ displaying information to the user
+- __Controller:__ interacting with the user and notifying views of changes in the model
+
+#### Repository Architecture
+- Collection of independent __Subsystems__ that work cooperatively on a common data structure, called the __Repository__
+
+<p align="right" style="margin-top: 2cm; margin-bottom: -1cm;">19 May 2016
+# Design Patterns
+- knowledge generalized from existing systems
+- provide a shared vocabulary for designers
+- provide examples of modifiable designs (abstract classes / inheritance and delegation)
+- generic solutions for recurring problems
+
+## Types of Design Patterns
+#### Structural Patterns
+- reduce coupling between classes
+- introduce abstract class to enable future extensions
+- encapsulate complex structures
+
+#### Behavioral Patterns
+- allow a choice between algorithms
+- allow the assignment of responsibilities to objects
+- model complex control flows that are difficult to follow at runtime
+
+#### Creational Patterns
+- allow to abstract from complex instantiation processes
+- make the system independent from he way its objects are created, composed and represented
+
+## Design Patterns
+#### Facade Pattern
+- unified __interface for a subsystem__, makes the subsystem easier to use
+- consists of a set of public operations
+- each public operation is delegated to one or more operations in the classes behind the façade
+
+#### Proxy Pattern
+- __access control__ (provides protection for the real object)
+- applicable when different actors have different access and viewing rights for the same object
+- __caching information__ (local representative for an object)
+- proxy and real subject implement the interface
+
+#### Adapter Pattern
+- converts the interface of the existing component into another interface expected by the calling component
+- useful in interface engineering projects and in reengineering projects
+
+#### Composite Pattern
+- lets a client treat an individual class and compositions of this class __uniformly__
+
+#### Strategy Patterns
+- can be used to switch between different functionalities implemented in classes
+
+#### Abstract Factory Pattern
+- manufacturer independence (developer can choose from many different families of products)
+- independence from representation (system is independent from product creation and representation)
+- constraints on related products (related products can be used together)
+- cope with change (underlying technology can be replaced)
+
+#### Bridge Pattern
+- provides a bridge between the abstraction in the application domain and the implementor in the solution domain
+- allows to delay the binding between an interface and its subclass to the start-up time of the system
+- provide multiple implementations under the same interface
+
+#### Observer Pattern
+- connects the state of an observed object, the subject with many observing objects, the observers
+- __push notification:__ notifies all observers every time the state changes
+- __pull notification:__ observer inquires about the state of the subject
+- can be used to provide multiple views of the current state and if the object's state changes quite often
+
+#### Template Method Pattern
+- uses inheritance to vary part of the algorithm
+- several subclasses share the same algorithm but differ on the specifics, common steps are factored out into an abstract class, subclasses provide different realizations of each of the steps
+
+#### State Pattern
+- object that can be in several states with different behavior in each of the states
+- useful for objects which change their state at runtime
+
+(observer, composite and strategy likely in exam)
+
+## Access Control
+#### Access Matrix
+- represents every non-empty cell in the matrix as a triple (actor,class,operation)
+- associates a class operation with an actor
+
+## Component Diagram
+- model the top-level view of the system design
+- show how the components are wired together
+- use UML Interfaces
+
+#### UML Interfaces
+- describes a group of operations
+- __provided interface__
+- __requred interface__
+
+## Deployment Diagram
+- show a design after these system design decisions have been made
+- graph of nodes and connections
+
+<p align="right" style="margin-top: 2cm; margin-bottom: -1cm;">24 May 2016
+# Object Design
+Object design prepares for the implementation of the system model based on design decisions
+
+Object-oriented software engineering | | Structured analysis / design
+-- |
+System Design </br> decomposition into subsystems || Preliminary Design </br> decomposition into subsystems, etc </br> __data structures are chosen__
+Object Design <br> __data structures and algorithms are chosen__ || Detailed Design </br> __algorithms are chosen__ </br> data structures are refined </br> __implementation language is chosen__
+Implementation </br> __Implementation language is chosen__ ||
+
+## Object Design Activities
+#### 1. Reuse:
+- use of inheritance
+- use of design patterns
+- off-the-shelf components
+
+#### 2. Interface specification
+- describes precisely each class interface
+
+#### 3. Object model restructuring
+- transforms the object design model to improve its understandability and extensibility
+
+### 4. Object model optimization
+- transforms the object design model to address performance criteria
+
+## Reuse in Object Design
+#### 1. Composition
+- A new class is created by the aggregation of the existing class. The new class offers the aggregated functionality of the existing classes
+
+#### 2. Inheritance
+- A new class is created by subclassing. The new class reuses the functionality of the superclass and may offer new functionality
+- __Description of Taxonomies__ (objects that are hierarchically related)
+- __Interface Specification__ (signatures of all objects)
+- Inheritance Associations can be identified by __Generalization__ and __Specialization__
+
+
+#### Generalization
+- first we find the subclass, then the super class
+- ususally leads to a __Model Transformation__
+
+#### Specialization
+- occurs when we find a subclass that is very similar to an existing class
+
+#### Implementation Inheritance
+- Subclassing from an implementation
+- Reuse: implemented functionality in the super class
+
+#### Delegation
+- Catching an operation and sending it to another object where it is already implemented
+- Reuse: implemented functionality in an existing object
+
+#### Specification Inheritance
+- Subclassing from a specification
+- Reuse: specified functionality in the super class
+
+#### Properties of a Good Model
+- low coupling and high cohesion
+- clear dependencies
+- explicit assumptions
+
+## Interface Specification
+#### 1. during requirements analysis
+- identification of attributes and operations
+- no need to specify types or their parameters
+
+#### 2. during object design
+- provide full API for class user
+- add type signature and visibility information
+
+<p align="right" style="margin-top: 2cm; margin-bottom: -1cm;">02 June 2016
+## Object Constraint Language (OCL)
+- formal language for expressing constraints over a set of objects in a model
+- constraints can be attached to the constrained UML element, e.g.
+
+  `<<precondition>>`</br>
+  `maxNumPlayers > 0`
+
+#### Invariant
+- predicate that is always true for all instances of a class
+
+e.g. The maximum number of players in any
+tournament should be a positive number."
+
+`context Tournament inv:`</br>
+`getMaxNumPlayers() > 0`
+
+#### Precondition
+- predicate that must be true before an operation is invoked
+
+e.g. "The acceptPlayer(p) operation can only be invoked if player p has not yet been accepted in the
+tournament."
+
+`context Tournament::acceptPlayer(p) pre:`</br>
+`not isPlayerAccepted(p)`
+
+#### Postcondition
+- predicate that must be true after an operation is invoked
+
+e.g. "The number of accepted players in
+a tournament increases by one after the completion of
+acceptPlayer()."
+
+`context Tournament::acceptPlayer(p) post:`</br>
+`getNumPlayers() = @pre.getNumPlayers() + 1`
+
+#### OCL Contract
+- set of all invariants, preconditions and postconditions associated with a UML class diagram
+
+#### OCL Collection
+- Set: every element can appear only once
+- Bag: elements can appear more than once
+- Sequence: elements are ordered
+
+#### OCL Collection Operations
+- size: Integer
+- includes(o:OclAny): Boolean
+- count(o:OclAny): Integer
+- isEmpty: Boolean
+- notEmpty: Boolean
+
+<p align="right" style="margin-top: 2cm; margin-bottom: -1cm;">9 June 2016
+## Mapping Models to Code (Forward Engineering)
+
+(likely in exam, L13)
+
+#### Refactoring
+- problem in the system model / source code
+
+#### Reengineering
+- change software system after it has been reverse engineered in order to add new functionality
+
+#### Mapping UML Class Diagrams
+- interfaces & classes
+- attributes & methods
+- inheritance
+- unidirectional 1-to-1 associations
+- bidirectional 1-to-1 associations
+- bidirectional 1-to-n associations
+- bidirectional m-to-n associations
+- qualified associations (identifier)
+
+#### Mapping Sequence Diagrams
+- can contain different types of interaction fragments:
+- __alt__ is used to described alternative
+scenarios of a workflow. Only one of
+the options gets executed
+- __opt__ is used to describe an optional
+step in a workflow. It can be executed
+but this depends on a certain guard element
+
+#### Mapping State Diagrams
+- introduce a variable state for the
+current state and a switch statement
+with case statements for each of the states
+
+# Software Engineering Heuristics
+## Design Heuristics
+- never use implementation inheritance, always use
+interface inheritance
+- a subclass should never hide operations
+implemented in a superclass
+- if you are tempted to use implementation
+inheritance, use delegation instead
+
+## Information Hiding Heuristics
+- carefully define the public interface for classes as
+well as subsystems (use a façade design pattern if possible)
+- make information only publicly available if necessary
+- the fewer details a class user has to know the easier the class can be changed and the less likely the class user will be affected by any changes in the class implementation
+- make attributes always private if possible
+
+## Contract Heuristics
+- be pragmatic, if you don’t have enough time,
+change your tests in the following order:
+- omit checking code for postconditions and invariants (often redundant)
+- omit checking code for private and protected methods
+
+## Transformation Heuristics
+- always use the same tool for any given transformation
+- keep contracts in the source code, not in the object design model
+- use same names for the same objects
+
+## Performance Heuristics
+- a simple design is likely to be both correct and fast
+- find bottleneck and eliminate it
+- avoid inherently expensive operations:
+- system calls
+- synchronization
+- network exchange
+- disk access
+- memory allocation
+
+[//]: <> (> quote)
+[//]: <> (![Image description](url))
+[//]: <> (## <p style="color:#FFC000">Color Headline)
+[//]: <> (```java public static void test() { } ```)

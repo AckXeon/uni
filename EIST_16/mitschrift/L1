@@ -1,0 +1,73 @@
+# Software Engineering
+- Software engineering is a collection of techniques, methodologies and tools that help with the production of
+- _A high quality software system developed with a given budget before a given deadline while change occurs_
+- Challenge: Dealing with **complexity** and **change**
+
+## Writing Software is problem solving
+- understanding the problem
+- proposing a solution and plan
+- engineering a system based on the proposed solution using a _good_ design
+- its about dealing with **complexity**
+  - creating abstractions and models
+  - notations for abstraction
+
+- its about dealing with change
+  - requirements elicitation, analysis, design, implementations, validation of the system, delivery and maintenance  
+
+## Models
+- a model is an abstraction of a system
+  - a system that no longer exists / an existing system / a future system to be built
+- Models are used to describe software systems
+  - **object model**: what is the structure of the system
+  - **functional model**_ what are the functions of the system
+  - **dynamic model**: how does the system react to external events
+  - together these models are a **system model**
+  - other models in software development:
+    - task model
+      - PERT Chart (dependencies of tasks),
+      - schedule: describes how the activities can be accomplished by the end of the project
+      - Organization chart: roles of the participants
+    - issue model
+      - what are the open issues?
+      - what proposals do we have to close the issues?
+      - what resolutions can be made?
+
+## Software development is difficult
+- The problem is usually ambiguous
+- the requirements are often unclear and changing
+- the problem domain (also called **application domain**) is usually complex
+- the **solution domain** is complex too
+- the development process is difficult to manage
+- software (offers) are extreme flexible
+- software is a discrete system
+  - continuous systems have no hidden surprises
+  - discrete systems can have hidden surprises!
+- A large scale system should consist of modules, where a module is a subsystem on its own
+
+- **Analysis**
+  - unterstand the nature of the problem and break the problem into pieces
+- **sythesis**
+  - put the pieces together into a larger structure
+- **techniques**
+  - formal procedures for producing results (parallel: cooking recipe)
+- **methodologies**
+  - collection of techniques unifies by a philosophical approach (parallel: collection of cooking recipes that also says what to do when there is no salt)
+- **tools**
+  - instruments of automated systems to accomplish a technique
+  - IDE / CASE
+
+
+
+**Computer science vs. Engineering**
+- the computer scientist
+  - assumes techniques and tools have to be developed
+  - proves theorems about algorithms
+  - designs languages and grammars
+  - has infinite time
+- the engineer
+  - develops a solution for a problem formulated by a client
+  - uses computers, languages, techniques, tools
+- the software engineer
+  - works in multiple application domains
+  - has only limited time
+  - while changes occurs in a complex problem formulation and often also in the available technology

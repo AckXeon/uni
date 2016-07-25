@@ -1,0 +1,87 @@
+
+## UML II
+
+### Sequence Diagrams
+- used during analysis
+  - to find "particitpating objects"
+  - to indentify operations on these
+- used during system design
+  - to refine subsystem interfaces
+- useful to identify missing objects
+- complement class diagrams
+- **notation**
+  - *instances*: rectangles (contains type of instance, optional: containing name of instance)
+  - *actors*: sticky figures
+  - *lifeline*: dashed lines
+    - *deallocation*: cross at end of lifeline
+  - *messages*: arrows (Operations on a participating object, for example method calls)
+    - *iteration*: star before message name
+    - *predicate*: square brackets before message name
+  - *data flow*: dashed arrow (for example return values)
+  - *activations*: narrow rectangles (activation record metaphor)
+  - *optional steps*: box containing optional steps that says "opt [condition]" in upper left corner
+  - *alternative steps*: box containing optional steps that says "alt [condition]" in upper left corner
+
+### communication diagrams
+  - Shows the interaction between objects or parts in terms of sequenced messages
+  - Communication diagrams represent a combination of information taken from Class, Sequence, and Use Case Diagrams describing both the static structure and dynamic behavior of a system.
+  - However, communication diagrams use the free-form arrangement of objects and links as used in Object diagrams.
+  - The communication diagram illustrates the flow of messages between the objects using the layout of the class diagram
+  - The sequence diagram uses lifelines, it does not use the layout of the class diagram.
+  - Communication diagrams show which elements each one interacts with better, but sequence diagrams show the order in which the interactions take place more clearly.
+
+  <img src="pics/comm.png" width="300">
+
+### statechart diagrams
+- *state*: an abstraction of the attributes of a class
+- states have duration
+
+- **notation**
+  - *transition*: arrow
+    - ---Event(attribute) [condition]/activity--->   (all parts are optional)
+  - *state*: rounded rectangle, name in top, line below, activities below line
+  - *activity* (behavior):
+    - prefixed with "/"
+    - in state:
+      - *entry/<activity>* executed on entry of state
+      - *do/<activity>* executed while in state (loop)
+      - *exit/<activity>* executed when leaving state
+  - *control node*
+    - *initial state*: solid circle
+    - *final node*: solid circle surrounded by a circle
+    - *fork node*
+    - *join node*
+    - *choice node*: diamond, condition in diamond
+      - conditions noted on outgoing arrows (guard predicate)
+    - *self transition*: transition, where target is identical with origin state
+
+#### state chart diagrams vs. sequence diagrams
+- statechart diagrams help to identify:
+  - changes to an individual object over time
+- sequence diagrams help to identify
+  - the temporal relationship of between objects over time
+  - sequence of operations as a response to one or more events
+
+### activity diagrams
+- activity diagrams consist of nodes and edges
+- a **node** describes an activity or object
+  - object node
+  - executable node
+  - control node
+- an **edge** is a directed connection between nodes
+  - control flow edges
+  - object flow edges
+- **notation**
+  - *object node*: square containing *object name*
+  - *executable node*: rounded square containing *action name*
+  - *pin*: alternative notation for an object node
+    - small square on both ends (exec nodes) of the edge
+  - for *initial state, final state, fork- / join node, choice node* see statechart diagram
+  - *choice nodes* also called *decision / merge nodes*
+  - *fork / join nodes*
+    - fork == "splitting"
+    - join == "synchronisation"
+    - **multiple activities between fork and join are executed in parallel**
+  - *swim lanes*: rectangle containing all the activities associated with one actor
+
+###
