@@ -124,7 +124,6 @@
 
 ### specification inheritance
 - eg: implementation of interfaces / abstract classes
--
 
 #### Abstract Operations in Java: Method Overriding and Strict Inheritance
 - *Method overriding*
